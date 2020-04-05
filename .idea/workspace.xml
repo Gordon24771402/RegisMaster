@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="50c12484-eb20-4313-b72c-f5ac3f333636" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZvgQ87FfkSRYKm98cGJi7g9qJC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SAT Registration" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.RegisMaster">
+    <configuration name="RegisMaster" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RegisMaster" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RegisMaster.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Testing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RegisMaster" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="RegisMaster" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.RegisMaster" />
+        <item itemvalue="Python.Testing" />
+        <item itemvalue="Python.testing" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="50c12484-eb20-4313-b72c-f5ac3f333636" name="Default Changelist" comment="" />
+      <created>1585724962807</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585724962807</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="376" y="104" key="#Inspections" timestamp="1585811893493">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="376" y="104" key="#Inspections/0.0.1536.864@0.0.1536.864" timestamp="1585811893493" />
+    <state x="392" y="108" key="#Inspections/0.0.1600.900@0.0.1600.900" timestamp="1585785844332" />
+    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585725118149">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1585725118149" />
+    <state x="572" y="195" key="FileChooserDialogImpl" timestamp="1586090863376">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1585725458732" />
+    <state x="572" y="195" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1586090863376" />
+    <state width="1579" height="185" key="GridCell.Tab.0.bottom" timestamp="1586096200795">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="992" height="204" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1585813479425" />
+    <state width="1579" height="185" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1586096200795" />
+    <state width="1579" height="185" key="GridCell.Tab.0.center" timestamp="1586096200795">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="992" height="204" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1585813479425" />
+    <state width="1579" height="185" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1586096200795" />
+    <state width="1579" height="185" key="GridCell.Tab.0.left" timestamp="1586096200795">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="992" height="204" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1585813479425" />
+    <state width="1579" height="185" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1586096200795" />
+    <state width="1579" height="185" key="GridCell.Tab.0.right" timestamp="1586096200795">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state width="992" height="204" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1585813479425" />
+    <state width="1579" height="185" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1586096200795" />
+    <state x="281" y="77" key="SettingsEditor" timestamp="1586090902033">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="270" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1585725486991" />
+    <state x="281" y="77" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1586090902033" />
+    <state x="468" y="267" key="com.intellij.ide.util.TipDialog" timestamp="1586095599036">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="449" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1585811178480" />
+    <state x="468" y="267" key="com.intellij.ide.util.TipDialog/0.0.1600.900@0.0.1600.900" timestamp="1586095599036" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1585812055697">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1585812055697" />
+  </component>
+</project>
