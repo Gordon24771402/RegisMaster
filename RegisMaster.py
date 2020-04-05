@@ -1,8 +1,12 @@
 from selenium import webdriver
 import time
-import playsound
+from playsound import playsound
+import schedule
+import os
 
-def browser_open(driver):
+
+
+def browser_maximize(driver):
     driver.maximize_window()
 
 
@@ -79,7 +83,7 @@ def collegeboard_log_in003(driver):
                 driver.refresh()
                 password = driver.find_element_by_xpath(
                     "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/div[2]/input")
-                password.send_keys("PASSWORD")
+                password.send_keys("PASSWORD)
                 print("Refresh & XPath: collegeboard_log_in003")
             except:
                 driver.refresh()
@@ -118,11 +122,11 @@ def collegeboard_log_in004(driver):
 def collegeboard_sat_home(driver):
     try:
         driver.get("https://nsat.collegeboard.org/satweb/satHomeAction.action")
-        print("Get: college_board_sat_home")
+        print("Get: collegeboard_sat_home")
     except:
         driver.refresh()
         driver.get("https://nsat.collegeboard.org/satweb/satHomeAction.action")
-        print("Refresh & Get: college_board_sat_home")
+        print("Refresh & Get: collegeboard_sat_home")
 
 
 # noinspection PyBroadException
@@ -149,6 +153,10 @@ def sat_register_another(driver):
             register_another = driver.find_element_by_id("actionRegisterAnother")
             register_another.click()
             print("Refresh & ID: sat_register_another")
+            try:
+                sat_register_another(driver)
+            except:
+                sat_register_another(driver)
 
 
 # noinspection PyBroadException
@@ -288,37 +296,60 @@ def browser_close(driver):
 def sat_main(driver):
     browser_maximize(driver)
     collegeboard_website(driver)
+    time.sleep(1)
     collegeboard_log_in001(driver)
-    time.sleep(3)
+    time.sleep(5)
     collegeboard_log_in002(driver)
+    time.sleep(1)
     collegeboard_log_in003(driver)
+    time.sleep(1)
     collegeboard_log_in004(driver)
-    time.sleep(3)
+    time.sleep(5)
     collegeboard_sat_home(driver)
-    time.sleep(3)
+    time.sleep(5)
     sat_register_another(driver)
-    time.sleep(3)
+    time.sleep(5)
     sat_authenticate_page(driver)
-    time.sleep(3)
+    time.sleep(5)
     sat_register_continue001(driver)
-    time.sleep(3)
+    time.sleep(5)
     sat_update_later(driver)
-    time.sleep(3)
+    time.sleep(5)
     sat_agree_terms(driver)
-    time.sleep(3)
+    time.sleep(5)
     sat_register_continue002(driver)
-    time.sleep(3)
+    time.sleep(5)
 
 
-options = webdriver.ChromeOptions()
-options.add_argument('--ignore-certificate-errors')
-driver = webdriver.Chrome(options=options)
-sat_main(driver)
-
-html = str(driver.execute_script("return document.documentElement.outerHTML"))
-if "There are no available registration dates for the current test year. Please check back later to register for " \
+def sat_schedule():
+    options = webdriver.ChromeOptions()
+    options.add_argument('--ignore-certificate-errors')
+    driver = webdriver.Chrome(options=options)
+    sat_main(driver)
+    html = str(driver.execute_script("return document.documentElement.outerHTML"))
+    if "There are no available registration dates for the current test year. Please check back later to register for " \
        "future tests." in html:
-    browser_close(driver)
-    print("Future SAT Registration Not Available!")
-else:
-    playsound("Alarm01.wav")
+        browser_close(driver)
+        print("")
+        print("Future SAT Registration Not Available!")
+    else:
+        n = 1
+        while n == 1:
+            playsound("Alarm01.wav")
+
+
+schedule.every().day.at("21:00").do(sat_schedule)
+schedule.every().day.at("22:00").do(sat_schedule)
+schedule.every().day.at("23:00").do(sat_schedule)
+schedule.every().day.at("00:00").do(sat_schedule)
+schedule.every().day.at("01:00").do(sat_schedule)
+schedule.every().day.at("02:00").do(sat_schedule)
+schedule.every().day.at("03:00").do(sat_schedule)
+schedule.every().day.at("04:00").do(sat_schedule)
+schedule.every().day.at("05:00").do(sat_schedule)
+schedule.every().day.at("06:00").do(sat_schedule)
+schedule.every().day.at("07:00").do(sat_schedule)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
