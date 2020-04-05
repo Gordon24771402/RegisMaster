@@ -2,8 +2,6 @@ from selenium import webdriver
 import time
 from playsound import playsound
 import schedule
-import os
-
 
 
 def browser_maximize(driver):
