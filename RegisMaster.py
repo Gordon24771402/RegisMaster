@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 from playsound import playsound
 import schedule
+import os
 
 
 def browser_maximize(driver):
@@ -26,13 +27,23 @@ def collegeboard_log_in001(driver):
             print("ID: collegeboard_log_in001")
         except:
             try:
+                os.system('ipconfig/release')
+                time.sleep(30)
+                os.system('ipconfig/renew')
+                time.sleep(30)
                 driver.refresh()
+                time.sleep(5)
                 sign_in = driver.find_element_by_xpath(
                     "/html/body/div[1]/div[1]/div/div/div/div[1]/div/div[2]/div/a[1]/span[1]")
                 sign_in.click()
                 print("Refresh & XPath: collegeboard_log_in001")
             except:
+                os.system('ipconfig/release')
+                time.sleep(30)
+                os.system('ipconfig/renew')
+                time.sleep(30)
                 driver.refresh()
+                time.sleep(5)
                 sign_in = driver.find_element_by_id("cb-atlas-header-1")
                 sign_in.clcik()
                 print("Refresh & ID: collegeboard_log_in001")
@@ -52,13 +63,23 @@ def collegeboard_log_in002(driver):
             print("ID: collegeboard_log_in002")
         except:
             try:
+                os.system('ipconfig/release')
+                time.sleep(30)
+                os.system('ipconfig/renew')
+                time.sleep(30)
                 driver.refresh()
+                time.sleep(5)
                 user_name = driver.find_element_by_xpath(
                     "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/div[1]/input")
                 user_name.send_keys("USERNAME")
                 print("Refresh & XPath: collegeboard_log_in002")
             except:
+                os.system('ipconfig/release')
+                time.sleep(30)
+                os.system('ipconfig/renew')
+                time.sleep(30)
                 driver.refresh()
+                time.sleep(5)
                 user_name = driver.find_element_by_id("userName")
                 user_name.send_keys("USERNAME")
                 print("Refresh & ID: collegeboard_log_in002")
@@ -78,13 +99,23 @@ def collegeboard_log_in003(driver):
             print("ID: collegeboard_log_in003")
         except:
             try:
+                os.system('ipconfig/release')
+                time.sleep(30)
+                os.system('ipconfig/renew')
+                time.sleep(30)
                 driver.refresh()
+                time.sleep(5)
                 password = driver.find_element_by_xpath(
                     "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/div[2]/input")
-                password.send_keys("PASSWORD)
+                password.send_keys("PASSWORD")
                 print("Refresh & XPath: collegeboard_log_in003")
             except:
+                os.system('ipconfig/release')
+                time.sleep(30)
+                os.system('ipconfig/renew')
+                time.sleep(30)
                 driver.refresh()
+                time.sleep(5)
                 password = driver.find_element_by_id("password")
                 password.send_keys("PASSWORD")
                 print("Refresh & ID: collegeboard_log_in003")
@@ -104,13 +135,23 @@ def collegeboard_log_in004(driver):
             print("ID: collegeboard_log_in004")
         except:
             try:
+                os.system('ipconfig/release')
+                time.sleep(30)
+                os.system('ipconfig/renew')
+                time.sleep(30)
                 driver.refresh()
+                time.sleep(5)
                 submit = driver.find_element_by_xpath(
                     "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/button")
                 submit.click()
                 print("Refresh & XPath: collegeboard_log_in004")
             except:
+                os.system('ipconfig/release')
+                time.sleep(30)
+                os.system('ipconfig/renew')
+                time.sleep(30)
                 driver.refresh()
+                time.sleep(5)
                 submit = driver.find_element_by_id("cb-atlas-identity-2")
                 submit.click()
                 print("Refresh & ID: collegeboard_log_in004")
@@ -122,7 +163,12 @@ def collegeboard_sat_home(driver):
         driver.get("https://nsat.collegeboard.org/satweb/satHomeAction.action")
         print("Get: collegeboard_sat_home")
     except:
+        os.system('ipconfig/release')
+        time.sleep(30)
+        os.system('ipconfig/renew')
+        time.sleep(30)
         driver.refresh()
+        time.sleep(5)
         driver.get("https://nsat.collegeboard.org/satweb/satHomeAction.action")
         print("Refresh & Get: collegeboard_sat_home")
 
@@ -139,6 +185,10 @@ def sat_register_another(driver):
         register_another.click()
         print("ID: sat_register_another")
         try:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             register_another = driver.find_element_by_xpath(
@@ -146,6 +196,10 @@ def sat_register_another(driver):
             register_another.click()
             print("Refresh & Xpath: sat_register_another")
         except:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             register_another = driver.find_element_by_id("actionRegisterAnother")
@@ -169,6 +223,10 @@ def sat_authenticate_page(driver):
         authenticate_page.click()
         print("ID: sat_authenticate_page")
         try:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             authenticate_page = driver.find_element_by_xpath(
@@ -176,6 +234,10 @@ def sat_authenticate_page(driver):
             authenticate_page.click()
             print("Refresh & Xpath: sat_authenticate_page")
         except:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             authenticate_page = driver.find_element_by_id("authenticatePage")
@@ -195,6 +257,10 @@ def sat_register_continue001(driver):
         register_continue001.click()
         print("ID: sat_register_continue001")
         try:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             register_continue001 = driver.find_element_by_xpath(
@@ -202,6 +268,10 @@ def sat_register_continue001(driver):
             register_continue001.click()
             print("Refresh & Xpath: sat_register_continue001")
         except:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             register_continue001 = driver.find_element_by_id("continue")
@@ -221,6 +291,10 @@ def sat_update_later(driver):
         update_later.click()
         print("ID: sat_update_later")
         try:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             update_later = driver.find_element_by_xpath(
@@ -228,6 +302,10 @@ def sat_update_later(driver):
             update_later.click()
             print("Refresh & Xpath: sat_update_later")
         except:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             update_later = driver.find_element_by_id("updateLater")
@@ -247,6 +325,10 @@ def sat_agree_terms(driver):
         agree_terms.click()
         print("ID: sat_agree_terms")
         try:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             agree_terms = driver.find_element_by_xpath(
@@ -254,6 +336,10 @@ def sat_agree_terms(driver):
             agree_terms.click()
             print("Refresh & Xpath: sat_agree_terms")
         except:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             agree_terms = driver.find_element_by_id("agreeTerms")
@@ -273,6 +359,10 @@ def sat_register_continue002(driver):
         register_continue002.click()
         print("ID: sat_register_continue002")
         try:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             register_continue002 = driver.find_element_by_xpath(
@@ -280,6 +370,10 @@ def sat_register_continue002(driver):
             register_continue002.click()
             print("Refresh & Xpath: sat_register_continue002")
         except:
+            os.system('ipconfig/release')
+            time.sleep(30)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             driver.refresh()
             time.sleep(5)
             register_continue002 = driver.find_element_by_id("continue")
@@ -517,9 +611,6 @@ def sat_schedule():
             playsound("Alarm01.wav")
 
 
-schedule.every().day.at("21:00").do(sat_schedule)
-schedule.every().day.at("22:00").do(sat_schedule)
-schedule.every().day.at("23:00").do(sat_schedule)
 schedule.every().day.at("00:00").do(sat_schedule)
 schedule.every().day.at("01:00").do(sat_schedule)
 schedule.every().day.at("02:00").do(sat_schedule)
@@ -528,6 +619,11 @@ schedule.every().day.at("04:00").do(sat_schedule)
 schedule.every().day.at("05:00").do(sat_schedule)
 schedule.every().day.at("06:00").do(sat_schedule)
 schedule.every().day.at("07:00").do(sat_schedule)
+schedule.every().day.at("19:00").do(sat_schedule)
+schedule.every().day.at("20:00").do(sat_schedule)
+schedule.every().day.at("21:00").do(sat_schedule)
+schedule.every().day.at("22:00").do(sat_schedule)
+schedule.every().day.at("23:00").do(sat_schedule)
 
 while True:
     schedule.run_pending()
