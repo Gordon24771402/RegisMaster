@@ -348,7 +348,7 @@ def sat_main(driver):
                                                 browser_close(driver)
                                                 try:
                                                     os.system('ipconfig/release')
-                                                    time.sleep(900)
+                                                    time.sleep(60)
                                                     os.system('ipconfig/renew')
                                                     time.sleep(30)
                                                     sat_main(driver)
@@ -362,7 +362,7 @@ def sat_main(driver):
                                             browser_close(driver)
                                             try:
                                                 os.system('ipconfig/release')
-                                                time.sleep(900)
+                                                time.sleep(60)
                                                 os.system('ipconfig/renew')
                                                 time.sleep(30)
                                                 sat_main(driver)
@@ -376,7 +376,7 @@ def sat_main(driver):
                                         browser_close(driver)
                                         try:
                                             os.system('ipconfig/release')
-                                            time.sleep(900)
+                                            time.sleep(60)
                                             os.system('ipconfig/renew')
                                             time.sleep(30)
                                             sat_main(driver)
@@ -390,7 +390,7 @@ def sat_main(driver):
                                     browser_close(driver)
                                     try:
                                         os.system('ipconfig/release')
-                                        time.sleep(900)
+                                        time.sleep(60)
                                         os.system('ipconfig/renew')
                                         time.sleep(30)
                                         sat_main(driver)
@@ -404,7 +404,7 @@ def sat_main(driver):
                                 browser_close(driver)
                                 try:
                                     os.system('ipconfig/release')
-                                    time.sleep(900)
+                                    time.sleep(60)
                                     os.system('ipconfig/renew')
                                     time.sleep(30)
                                     sat_main(driver)
@@ -418,7 +418,7 @@ def sat_main(driver):
                             browser_close(driver)
                             try:
                                 os.system('ipconfig/release')
-                                time.sleep(900)
+                                time.sleep(60)
                                 os.system('ipconfig/renew')
                                 time.sleep(30)
                                 sat_main(driver)
@@ -432,7 +432,7 @@ def sat_main(driver):
                         browser_close(driver)
                         try:
                             os.system('ipconfig/release')
-                            time.sleep(900)
+                            time.sleep(60)
                             os.system('ipconfig/renew')
                             time.sleep(30)
                             sat_main(driver)
@@ -446,7 +446,7 @@ def sat_main(driver):
                     browser_close(driver)
                     try:
                         os.system('ipconfig/release')
-                        time.sleep(900)
+                        time.sleep(60)
                         os.system('ipconfig/renew')
                         time.sleep(30)
                         sat_main(driver)
@@ -460,7 +460,7 @@ def sat_main(driver):
                 browser_close(driver)
                 try:
                     os.system('ipconfig/release')
-                    time.sleep(900)
+                    time.sleep(60)
                     os.system('ipconfig/renew')
                     time.sleep(30)
                     sat_main(driver)
@@ -474,7 +474,7 @@ def sat_main(driver):
             browser_close(driver)
             try:
                 os.system('ipconfig/release')
-                time.sleep(900)
+                time.sleep(60)
                 os.system('ipconfig/renew')
                 time.sleep(30)
                 sat_main(driver)
@@ -488,7 +488,7 @@ def sat_main(driver):
         browser_close(driver)
         try:
             os.system('ipconfig/release')
-            time.sleep(900)
+            time.sleep(60)
             os.system('ipconfig/renew')
             time.sleep(30)
             sat_main(driver)
