@@ -332,52 +332,100 @@ def sat_main(driver):
                                                     time.sleep(5)
                                                 except:
                                                     browser_close(driver)
-                                                    time.sleep(900)
-                                                    sat_main(driver)
+                                                    try:
+                                                        time.sleep(120)
+                                                        sat_main(driver)
+                                                    except:
+                                                        time.sleep(900)
+                                                        sat_main(driver)
                                             except:
                                                 browser_close(driver)
-                                                time.sleep(900)
-                                                sat_main(driver)
+                                                try:
+                                                    time.sleep(120)
+                                                    sat_main(driver)
+                                                except:
+                                                    time.sleep(900)
+                                                    sat_main(driver)
                                         except:
                                             browser_close(driver)
-                                            time.sleep(900)
-                                            sat_main(driver)
+                                            try:
+                                                time.sleep(120)
+                                                sat_main(driver)
+                                            except:
+                                                time.sleep(900)
+                                                sat_main(driver)
                                     except:
                                         browser_close(driver)
-                                        time.sleep(900)
-                                        sat_main(driver)
+                                        try:
+                                            time.sleep(120)
+                                            sat_main(driver)
+                                        except:
+                                            time.sleep(900)
+                                            sat_main(driver)
                                 except:
                                     browser_close(driver)
-                                    time.sleep(900)
-                                    sat_main(driver)
+                                    try:
+                                        time.sleep(120)
+                                        sat_main(driver)
+                                    except:
+                                        time.sleep(900)
+                                        sat_main(driver)
                             except:
                                 browser_close(driver)
-                                time.sleep(900)
-                                sat_main(driver)
+                                try:
+                                    time.sleep(120)
+                                    sat_main(driver)
+                                except:
+                                    time.sleep(900)
+                                    sat_main(driver)
                         except:
                             browser_close(driver)
-                            time.sleep(900)
-                            sat_main(driver)
+                            try:
+                                time.sleep(120)
+                                sat_main(driver)
+                            except:
+                                time.sleep(900)
+                                sat_main(driver)
                     except:
                         browser_close(driver)
-                        time.sleep(900)
-                        sat_main(driver)
+                        try:
+                            time.sleep(120)
+                            sat_main(driver)
+                        except:
+                            time.sleep(900)
+                            sat_main(driver)
                 except:
                     browser_close(driver)
-                    time.sleep(900)
-                    sat_main(driver)
+                    try:
+                        time.sleep(120)
+                        sat_main(driver)
+                    except:
+                        time.sleep(900)
+                        sat_main(driver)
             except:
                 browser_close(driver)
-                time.sleep(900)
-                sat_main(driver)
+                try:
+                    time.sleep(120)
+                    sat_main(driver)
+                except:
+                    time.sleep(900)
+                    sat_main(driver)
         except:
             browser_close(driver)
-            time.sleep(900)
-            sat_main(driver)
+            try:
+                time.sleep(120)
+                sat_main(driver)
+            except:
+                time.sleep(900)
+                sat_main(driver)
     except:
         browser_close(driver)
-        time.sleep(900)
-        sat_main(driver)
+        try:
+            time.sleep(120)
+            sat_main(driver)
+        except:
+            time.sleep(900)
+            sat_main(driver)
 
 def sat_schedule():
     options = webdriver.ChromeOptions()
