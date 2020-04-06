@@ -333,99 +333,172 @@ def sat_main(driver):
                                                 except:
                                                     browser_close(driver)
                                                     try:
-                                                        time.sleep(120)
+                                                        os.system('ipconfig/release')
+                                                        time.sleep(60)
+                                                        os.system('ipconfig/renew')
+                                                        time.sleep(30)
                                                         sat_main(driver)
                                                     except:
+                                                        os.system('ipconfig/release')
                                                         time.sleep(900)
+                                                        os.system('ipconfig/renew')
+                                                        time.sleep(30)
                                                         sat_main(driver)
                                             except:
                                                 browser_close(driver)
                                                 try:
-                                                    time.sleep(120)
+                                                    os.system('ipconfig/release')
+                                                    time.sleep(900)
+                                                    os.system('ipconfig/renew')
+                                                    time.sleep(30)
                                                     sat_main(driver)
                                                 except:
+                                                    os.system('ipconfig/release')
                                                     time.sleep(900)
+                                                    os.system('ipconfig/renew')
+                                                    time.sleep(30)
                                                     sat_main(driver)
                                         except:
                                             browser_close(driver)
                                             try:
-                                                time.sleep(120)
+                                                os.system('ipconfig/release')
+                                                time.sleep(900)
+                                                os.system('ipconfig/renew')
+                                                time.sleep(30)
                                                 sat_main(driver)
                                             except:
+                                                os.system('ipconfig/release')
                                                 time.sleep(900)
+                                                os.system('ipconfig/renew')
+                                                time.sleep(30)
                                                 sat_main(driver)
                                     except:
                                         browser_close(driver)
                                         try:
-                                            time.sleep(120)
+                                            os.system('ipconfig/release')
+                                            time.sleep(900)
+                                            os.system('ipconfig/renew')
+                                            time.sleep(30)
                                             sat_main(driver)
                                         except:
+                                            os.system('ipconfig/release')
                                             time.sleep(900)
+                                            os.system('ipconfig/renew')
+                                            time.sleep(30)
                                             sat_main(driver)
                                 except:
                                     browser_close(driver)
                                     try:
-                                        time.sleep(120)
+                                        os.system('ipconfig/release')
+                                        time.sleep(900)
+                                        os.system('ipconfig/renew')
+                                        time.sleep(30)
                                         sat_main(driver)
                                     except:
+                                        os.system('ipconfig/release')
                                         time.sleep(900)
+                                        os.system('ipconfig/renew')
+                                        time.sleep(30)
                                         sat_main(driver)
                             except:
                                 browser_close(driver)
                                 try:
-                                    time.sleep(120)
+                                    os.system('ipconfig/release')
+                                    time.sleep(900)
+                                    os.system('ipconfig/renew')
+                                    time.sleep(30)
                                     sat_main(driver)
                                 except:
+                                    os.system('ipconfig/release')
                                     time.sleep(900)
+                                    os.system('ipconfig/renew')
+                                    time.sleep(30)
                                     sat_main(driver)
                         except:
                             browser_close(driver)
                             try:
-                                time.sleep(120)
+                                os.system('ipconfig/release')
+                                time.sleep(900)
+                                os.system('ipconfig/renew')
+                                time.sleep(30)
                                 sat_main(driver)
                             except:
+                                os.system('ipconfig/release')
                                 time.sleep(900)
+                                os.system('ipconfig/renew')
+                                time.sleep(30)
                                 sat_main(driver)
                     except:
                         browser_close(driver)
                         try:
-                            time.sleep(120)
+                            os.system('ipconfig/release')
+                            time.sleep(900)
+                            os.system('ipconfig/renew')
+                            time.sleep(30)
                             sat_main(driver)
                         except:
+                            os.system('ipconfig/release')
                             time.sleep(900)
+                            os.system('ipconfig/renew')
+                            time.sleep(30)
                             sat_main(driver)
                 except:
                     browser_close(driver)
                     try:
-                        time.sleep(120)
+                        os.system('ipconfig/release')
+                        time.sleep(900)
+                        os.system('ipconfig/renew')
+                        time.sleep(30)
                         sat_main(driver)
                     except:
+                        os.system('ipconfig/release')
                         time.sleep(900)
+                        os.system('ipconfig/renew')
+                        time.sleep(30)
                         sat_main(driver)
             except:
                 browser_close(driver)
                 try:
-                    time.sleep(120)
+                    os.system('ipconfig/release')
+                    time.sleep(900)
+                    os.system('ipconfig/renew')
+                    time.sleep(30)
                     sat_main(driver)
                 except:
+                    os.system('ipconfig/release')
                     time.sleep(900)
+                    os.system('ipconfig/renew')
+                    time.sleep(30)
                     sat_main(driver)
         except:
             browser_close(driver)
             try:
-                time.sleep(120)
+                os.system('ipconfig/release')
+                time.sleep(900)
+                os.system('ipconfig/renew')
+                time.sleep(30)
                 sat_main(driver)
             except:
+                os.system('ipconfig/release')
                 time.sleep(900)
+                os.system('ipconfig/renew')
+                time.sleep(30)
                 sat_main(driver)
     except:
         browser_close(driver)
         try:
-            time.sleep(120)
+            os.system('ipconfig/release')
+            time.sleep(900)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             sat_main(driver)
         except:
+            os.system('ipconfig/release')
             time.sleep(900)
+            os.system('ipconfig/renew')
+            time.sleep(30)
             sat_main(driver)
+
 
 def sat_schedule():
     options = webdriver.ChromeOptions()
