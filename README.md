@@ -5,4 +5,8 @@ Replace "USERNAME" in "user_name.send_keys("USERNAME")" with yours.
 
 Replace "PASSWORD" in "password.send_keys("PASSWORD")" with yours.
 
+Replace "USERNAME" in "for characters in "USERNAME":" with yours.
+
+Replace "PASSWORD" in "for characters in "PASSWORD":" with yours.
+
 Pycharm is suggested~~~
