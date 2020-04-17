@@ -7,3 +7,5 @@ Replace "USERNAME" in "user_name.send_keys("USERNAME")" with yours.
 
 Replace "PASSWORD" in "password.send_keys("PASSWORD")" with yours.
 
+If you don't have mitmproxy installed, please check the following link:
+https://github.com/mitmproxy/mitmproxy
