@@ -11,3 +11,5 @@ If you don't have mitmproxy installed, please check the following link:
 https://github.com/mitmproxy/mitmproxy
 
 Capability is indicated from the LOG file.
+
+Sometimes the first idea might not work, but I always learn.
