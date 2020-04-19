@@ -10,149 +10,114 @@ from playsound import playsound
 import time
 import random
 
-
 def os_mitmproxy():
     os.chdir('C:/Users/Hao Kang')
     os.system('mitmdump --mode upstream:127.0.0.1:7890 -s modify_response.py')
 
-
-def refresh_completion(driver):
+def refresh_driver(driver):
     driver.refresh()
-    time.sleep(random.randint(3, 10))
+    time.sleep(random.randint(3, 8))
     driver.refresh()
+    time.sleep(random.randint(3, 8))
 
+def reboot_main_program(driver):
+    driver.close()
+    time.sleep(random.randint(300, 350))
+    main_program()
 
-def try_again(driver):
+def error001(driver):
     html = str(driver.execute_script("return document.documentElement.outerHTML"))
     if "We are unable to process your request due to a system error." and "Please try again later." in html:
-        refresh_completion(driver)
-        again = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-            By.XPATH, "/html/body/div/div[1]/div[1]/div/div/ul/li/a")))
+        refresh_driver(driver)
+        again = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div/div[1]/div[1]/div/div/ul/li/a")))
         again.click()
         time.sleep(random.randint(5, 15))
-
         try:
-            register_another = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "actionRegisterAnother")))
-            register_another.click()
+            iteration(actionRegisterAnother(driver), driver)
+            iteration(authenticatePage(driver), driver)
+            iteration(Continue001(driver), driver)
+            iteration(updateLater(driver), driver)
+            iteration(agreeTerms(driver), driver)
+            iteration(Continue002(driver), driver)
+            iteration(inspect_future_SAT(driver), driver)
+        except:
+            reboot_main_program(driver)
+
+def iteration(program, driver):
+    try:
+        program
+    except:
+        try:
+            refresh_driver(driver)
+            program
             time.sleep(random.randint(5, 15))
         except:
             try:
-                refresh_completion(driver)
-                register_another = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                    By.ID, "actionRegisterAnother")))
-                register_another.click()
-                time.sleep(random.randint(5, 15))
+                error001(driver)
             except:
-                try_again(driver)
+                reboot_main_program(driver)
 
-        try:
-            authenticate_page = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "authenticatePage")))
-            authenticate_page.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try:
-                refresh_completion(driver)
-                authenticate_page = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                    By.ID, "authenticatePage")))
-                authenticate_page.click()
-                time.sleep(random.randint(5, 15))
-            except:
-                try_again(driver)
+def get_collegeboard_website(driver):
+    driver.get('https://collegereadiness.collegeboard.org/')
+    time.sleep(random.randint(5, 15))
 
-        try:
-            register_continue001 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "continue")))
-            register_continue001.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try:
-                refresh_completion(driver)
-                register_continue001 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                    By.ID, "continue")))
-                register_continue001.click()
-                time.sleep(random.randint(5, 15))
-            except:
-                try_again(driver)
+def login(driver):
+    sign_in = WebDriverWait(driver, 120).until(
+        EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/div[1]/div/div/div/div[1]/div/div[2]/div/a[1]")))
+    sign_in.click()
+    user_name = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.XPATH,
+                                                                             "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/div[1]/input")))
+    user_name.send_keys("USERNAME")
+    password = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.XPATH,
+                                                                            "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/div[2]/input")))
+    password.send_keys("PASSWORD")
+    submit = WebDriverWait(driver, 120).until(EC.element_to_be_clickable(
+        (By.XPATH, "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/button")))
+    submit.click()
+    time.sleep(random.randint(5, 15))
 
-        try:
-            update_later = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "updateLater")))
-            update_later.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try:
-                refresh_completion(driver)
-                update_later = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                    By.ID, "updateLater")))
-                update_later.click()
-                time.sleep(random.randint(5, 15))
-            except:
-                try_again(driver)
+def get_collegeboard_registration_website(driver):
+    driver.get("https://nsat.collegeboard.org/satweb/satHomeAction.action")
 
-        try:
-            agree_terms = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "agreeTerms")))
-            agree_terms.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try:
-                refresh_completion(driver)
-                agree_terms = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                    By.ID, "agreeTerms")))
-                agree_terms.click()
-                time.sleep(random.randint(5, 15))
-            except:
-                try_again(driver)
+def actionRegisterAnother(driver):
+    register_another = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.ID, "actionRegisterAnother")))
+    register_another.click()
 
-        register_continue002 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-            By.ID, "continue")))
-        register_continue002.click()
-        time.sleep(random.randint(5, 15))
+def authenticatePage(driver):
+    authenticate_page = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.ID, "authenticatePage")))
+    authenticate_page.click()
 
-        while True:
-            WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "cancelBtn")))
-            html = str(driver.execute_script("return document.documentElement.outerHTML"))
-            if "There are no available registration dates for the current test year. Please check back later to register for future tests." in html:
-                with open('LOG.txt', 'a') as LOG:
-                    LOG.write('\n' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ": " + "Future SAT NOT Available!")
-            elif "There are no available registration dates for the current test year. Please check back later to register for future tests." not in html:
-                while True:
-                    playsound("Alarm01.wav")
+def Continue001(driver):
+    continue001 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.ID, "continue")))
+    continue001.click()
 
-            time.sleep(random.randint(300, 350))
-            driver.back()
-            refresh_completion(driver)
-            try:
-                agree_terms = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                    By.ID, "agreeTerms")))
-                agree_terms.click()
-                time.sleep(random.randint(5, 15))
-            except:
-                try:
-                    refresh_completion(driver)
-                    agree_terms = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                        By.ID, "agreeTerms")))
-                    agree_terms.click()
-                    time.sleep(random.randint(5, 15))
-                except:
-                    try_again(driver)
-            try:
-                register_continue002 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                    By.ID, "continue")))
-                register_continue002.click()
-                time.sleep(random.randint(5, 15))
-            except:
-                try:
-                    refresh_completion(driver)
-                    register_continue002 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                        By.ID, "continue")))
-                    register_continue002.click()
-                    time.sleep(random.randint(5, 15))
-                except:
-                    try_again(driver)
+def updateLater(driver):
+    update_later = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.ID, "updateLater")))
+    update_later.click()
+
+def agreeTerms(driver):
+    agree_terms = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.ID, "agreeTerms")))
+    agree_terms.click()
+
+def Continue002(driver):
+    continue002 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.ID, "continue")))
+    continue002.click()
+
+def inspect_future_SAT(driver):
+    while True:
+        WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.ID, "cancelBtn")))
+        html = str(driver.execute_script("return document.documentElement.outerHTML"))
+        if "There are no available registration dates for the current test year. Please check back later to register for future tests." in html:
+            with open('LOG.txt', 'a') as LOG:
+                LOG.write('\n' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ": " + "Future SAT NOT Available!")
+        elif "There are no available registration dates for the current test year. Please check back later to register for future tests." not in html:
+            while True:
+                playsound("Alarm01.wav")
+        time.sleep(random.randint(300, 350))
+        driver.back()
+        refresh_driver(driver)
+        iteration(agreeTerms, driver)
+        iteration(Continue002(driver), driver)
 
 def main_program():
     os.chdir('C:/Users/Hao Kang/PycharmProjects/RegisMaster')
@@ -162,168 +127,22 @@ def main_program():
     options.add_argument('--start-maximized')
     options.add_argument('--proxy-server=127.0.0.1:8080')
     driver = webdriver.Chrome(options=options)
-
     try:
-        driver.get('https://collegereadiness.collegeboard.org/')
-        time.sleep(random.randint(5, 15))
+        iteration(get_collegeboard_website(driver), driver)
+        iteration(login(driver), driver)
+        iteration(get_collegeboard_registration_website(driver), driver)
+        iteration(actionRegisterAnother(driver), driver)
+        iteration(authenticatePage(driver), driver)
+        iteration(Continue001(driver), driver)
+        iteration(updateLater(driver), driver)
+        iteration(agreeTerms(driver), driver)
+        iteration(Continue002(driver), driver)
+        iteration(inspect_future_SAT(driver), driver)
     except:
-        refresh_completion(driver)
-        driver.get('https://collegereadiness.collegeboard.org/')
-        time.sleep(random.randint(5, 15))
-
-    sign_in = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-        By.XPATH, "/html/body/div[1]/div[1]/div/div/div/div[1]/div/div[2]/div/a[1]")))
-    sign_in.click()
-
-    user_name = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-        By.XPATH,
-        "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/div[1]/input")))
-    user_name.send_keys("GORDON24771402")
-
-    password = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-        By.XPATH,
-        "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/div[2]/input")))
-    password.send_keys("Up5G2R_9VrN2-Kw")
-
-    submit = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-        By.XPATH, "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/button")))
-    submit.click()
-    time.sleep(random.randint(5, 15))
-
-    try:
-        driver.get("https://nsat.collegeboard.org/satweb/satHomeAction.action")
-        time.sleep(random.randint(5, 15))
-    except:
-        refresh_completion(driver)
-        driver.get("https://nsat.collegeboard.org/satweb/satHomeAction.action")
-        time.sleep(random.randint(5, 15))
-
-    try:
-        register_another = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-            By.ID, "actionRegisterAnother")))
-        register_another.click()
-        time.sleep(random.randint(5, 15))
-    except:
-        try:
-            refresh_completion(driver)
-            register_another = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "actionRegisterAnother")))
-            register_another.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try_again(driver)
-
-    try:
-        authenticate_page = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-            By.ID, "authenticatePage")))
-        authenticate_page.click()
-        time.sleep(random.randint(5, 15))
-    except:
-        try:
-            refresh_completion(driver)
-            authenticate_page = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "authenticatePage")))
-            authenticate_page.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try_again(driver)
-
-    try:
-        register_continue001 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-            By.ID, "continue")))
-        register_continue001.click()
-        time.sleep(random.randint(5, 15))
-    except:
-        try:
-            refresh_completion(driver)
-            register_continue001 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "continue")))
-            register_continue001.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try_again(driver)
-
-    try:
-        update_later = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-            By.ID, "updateLater")))
-        update_later.click()
-        time.sleep(random.randint(5, 15))
-    except:
-        try:
-            refresh_completion(driver)
-            update_later = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "updateLater")))
-            update_later.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try_again(driver)
-
-    try:
-        agree_terms = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-            By.ID, "agreeTerms")))
-        agree_terms.click()
-        time.sleep(random.randint(5, 15))
-    except:
-        try:
-            refresh_completion(driver)
-            agree_terms = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "agreeTerms")))
-            agree_terms.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try_again(driver)
-
-    register_continue002 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-        By.ID, "continue")))
-    register_continue002.click()
-    time.sleep(random.randint(5, 15))
-
-    while True:
-        WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-            By.ID, "cancelBtn")))
-        html = str(driver.execute_script("return document.documentElement.outerHTML"))
-        if "There are no available registration dates for the current test year. Please check back later to register for future tests." in html:
-            with open('LOG.txt', 'a') as LOG:
-                LOG.write('\n' + datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ": " + "Future SAT NOT Available!")
-        elif "There are no available registration dates for the current test year. Please check back later to register for future tests." not in html:
-            while True:
-                playsound("Alarm01.wav")
-
-        time.sleep(random.randint(300, 350))
-        driver.back()
-        refresh_completion(driver)
-        try:
-            agree_terms = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "agreeTerms")))
-            agree_terms.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try:
-                refresh_completion(driver)
-                agree_terms = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                    By.ID, "agreeTerms")))
-                agree_terms.click()
-                time.sleep(random.randint(5, 15))
-            except:
-                try_again(driver)
-        try:
-            register_continue002 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                By.ID, "continue")))
-            register_continue002.click()
-            time.sleep(random.randint(5, 15))
-        except:
-            try:
-                refresh_completion(driver)
-                register_continue002 = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((
-                    By.ID, "continue")))
-                register_continue002.click()
-                time.sleep(random.randint(5, 15))
-            except:
-                try_again(driver)
+        reboot_main_program(driver)
 
 
 thread_001 = threading.Thread(target=os_mitmproxy)
 thread_002 = threading.Thread(target=main_program)
 thread_001.start()
-time.sleep(random.randint(3, 5))
 thread_002.start()
