@@ -3,8 +3,7 @@ from mitmproxy import ctx
 
 
 def response(flow):
-    """修改应答数据
-    """
+
     if '/js/yoda.' in flow.request.url:
         for webdriver_key in ['webdriver', '__driver_evaluate', '__webdriver_evaluate', '__selenium_evaluate',
                               '__fxdriver_evaluate', '__driver_unwrapped', '__webdriver_unwrapped',
