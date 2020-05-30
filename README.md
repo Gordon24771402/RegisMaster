@@ -7,5 +7,5 @@ Replace "USERNAME" in "user_name.send_keys("USERNAME")" with yours.
 
 Replace "PASSWORD" in "password.send_keys("PASSWORD")" with yours.
 
-# Google Colab Feature Added for RegisMaster
+# Google Colab Feature Added for RegisMaster.py
 https://colab.research.google.com/github/Gordon24771402/RegisMaster/blob/master/RegisMaster.ipynb
