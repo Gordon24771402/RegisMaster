@@ -95,10 +95,10 @@ def login(driver):
     sign_in.click()
     user_name = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.XPATH,
                                                                              "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/div[1]/input")))
-    user_name.send_keys("GORDON24771402")
+    user_name.send_keys("USERNAME")
     password = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.XPATH,
                                                                             "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/div[2]/input")))
-    password.send_keys("Up5G2R_9VrN2-Kw")
+    password.send_keys("PASSWORD")
     submit = WebDriverWait(driver, 120).until(EC.element_to_be_clickable(
         (By.XPATH, "/html/body/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div/div/div/div[1]/div/div[2]/form/button")))
     submit.click()
@@ -107,10 +107,10 @@ def login(driver):
 def error2_login(driver):
     user_name = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.XPATH,
                                                                              "/html/body/div/div[3]/div/div/div[1]/div/div/div[2]/div/div/div/div/form/div[1]/div[1]/div[2]/input")))
-    user_name.send_keys("GORDON24771402")
+    user_name.send_keys("USERNAME")
     password = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.XPATH,
                                                                             "/html/body/div/div[3]/div/div/div[1]/div/div/div[2]/div/div/div/div/form/div[1]/div[2]/div[2]/input")))
-    password.send_keys("Up5G2R_9VrN2-Kw")
+    password.send_keys("PASSWORD")
     submit = WebDriverWait(driver, 120).until(EC.element_to_be_clickable((By.XPATH,
                                                                           "/html/body/div/div[3]/div/div/div[1]/div/div/div[2]/div/div/div/div/form/div[3]/div[1]/button")))
     submit.click()
